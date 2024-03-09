@@ -7,4 +7,28 @@
     @apply bg-white text-black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
+
+  .accordian-wrapper {
+    @apply flex justify-center items-center flex-col gap-10 h-screen w-screen;
+  }
+
+  .accordian-wrapper button {
+    @apply rounded-md border-solid border-2 border-zinc-700 hover:bg-zinc-400 text-sm font-bold px-5 py-2.5;
+  }
+
+  .accordian {
+    @apply w-3/4;
+  }
+
+  .accordian-item {
+    @apply bg-stone-600 mb-10 px-20 py-10;
+  }
+
+  .accordian-title {
+    @apply flex justify-between items-center cursor-pointer text-white text-lg font-bold;
+  }
+
+  .accordian-content {
+    @apply h-auto text-white;
+  }
 }

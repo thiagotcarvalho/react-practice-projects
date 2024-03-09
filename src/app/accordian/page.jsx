@@ -5,36 +5,64 @@ import data from './data';
 
 export default function Accordian() {
   const [selected, setSelected] = useState(null)
+  const [enableMultipleSelection, setEnableMultipleSelection] = useState(false);
+  const [multipleSelected, setMultipleSelected] = useState([]);
 
   function handleSingleSelection(id) {
     setSelected(id === selected ? null : id);
   }
 
-  console.log(selected);
+  function handleMultipleSelection(id) {
+    let currentMultipleSelected = [...multipleSelected];
+    let indexOfCurrentId = currentMultipleSelected.indexOf(id);
 
-  return <div className='flex justify-center items-center h-screen w-screen'>
-    <div className='w-500px'>
-      {
-        data && data.length > 0 ? (
-          data.map((dataItem) => (
-            <div key={dataItem.id} className='bg-teal-400 mb-10 px-20 py-10'>
-              <div
-                onClick={() => handleSingleSelection(dataItem.id)}
-                className='flex justify-between items-center cursor-pointer text-white '
-              >
-                <h3>{dataItem.question}</h3>
-                <span>+</span>
-              </div>
-              {
-                selected === dataItem.id ? (
-                  <div className='content'>{dataItem.answer}</div>
-                ) : (false)
+    if (indexOfCurrentId === -1) {
+      currentMultipleSelected.push(id);
+    } else {
+      currentMultipleSelected.splice(indexOfCurrentId, 1);
+    }
+
+    setMultipleSelected(currentMultipleSelected);
+  }
+
+  return <div className="accordian-wrapper">
+    {/* Change color when button is selected */}
+    <button onClick={() => setEnableMultipleSelection(!enableMultipleSelection)}>
+      Enable Multi-Selection
+    </button>
+    <div className="accordian">
+      {data && data.length > 0 ? (
+        data.map(dataItem => (
+          <div
+            key={dataItem.id}
+            className="accordian-item"
+          >
+            <div
+              onClick={
+                enableMultipleSelection
+                  ? () => handleMultipleSelection(dataItem.id)
+                  : () => handleSingleSelection(dataItem.id)
               }
+              className="accordian-title"
+            >
+              <h3>{dataItem.question}</h3>
+              {/* Change to minus (-) when active. */}
+              <span>+</span>
             </div>
-          ))
-        ) : (
-          <div>No data found</div>
-        )}
+            {/* Simplify this... */}
+            {enableMultipleSelection
+              ? multipleSelected.indexOf(dataItem.id) !== -1 && (
+                <div className='accordian-content'>{dataItem.answer}</div>
+              ) :
+              selected === dataItem.id && (
+                <div className='accordian-content'>{dataItem.answer}</div>
+              )
+            }
+          </div>
+        ))
+      ) : (
+        <div className='accordian-content'>No data found</div>
+      )}
     </div>
   </div>
 }
