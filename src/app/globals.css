@@ -3,11 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+
+  /* GLOBAL */
   html {
     @apply bg-white text-black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
+  /* ACCORDIAN */
   .accordian-wrapper {
     @apply flex justify-center items-center flex-col gap-10 h-screen w-screen;
   }
@@ -30,5 +33,10 @@
 
   .accordian-content {
     @apply h-auto text-white;
+  }
+
+  /* RANDOM COLOR */
+  .random-color-container {
+    @apply h-screen w-screen
   }
 }
