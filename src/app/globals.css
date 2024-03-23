@@ -37,6 +37,22 @@
 
   /* RANDOM COLOR */
   .random-color-container {
-    @apply h-screen w-screen
+    @apply h-screen w-screen;
+  }
+
+  .random-color-button-wrapper {
+    @apply flex items-center justify-center flex-row gap-5;
+  }
+
+  .random-color-button-wrapper button {
+    @apply bg-stone-100 rounded-md shadow-md text-sm font-bold px-5 py-2.5 mt-5;
+  }
+  
+  .random-color-button-wrapper button:hover {
+    @apply bg-green-500;
+  }
+
+  .random-color-title-wrapper {
+    @apply flex flex-col justify-center items-center gap-10 text-white mt-10;
   }
 }
