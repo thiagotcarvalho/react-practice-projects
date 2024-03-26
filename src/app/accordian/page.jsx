@@ -25,10 +25,17 @@ export default function Accordian() {
     setMultipleSelected(currentMultipleSelected);
   }
 
+  function handleMultiSelectClick() {
+    setSelected(null);
+    setMultipleSelected([]);
+    setEnableMultipleSelection(!enableMultipleSelection);
+  }
+
   return (
     <div className="accordian-wrapper">
       {/* Change color when button is selected */}
-      <button onClick={() => setEnableMultipleSelection(!enableMultipleSelection)}>
+      {/* <button onClick={() => setEnableMultipleSelection(!enableMultipleSelection)}> */}
+      <button onClick={handleMultiSelectClick}>
         Enable Multi-Selection
       </button>
       <div className="accordian">
