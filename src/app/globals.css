@@ -53,6 +53,14 @@
   }
 
   .random-color-title-wrapper {
-    @apply flex flex-col justify-center items-center gap-10 text-white mt-10;
+    @apply flex flex-col justify-center items-center gap-3 text-white mt-20;
+  }
+
+  .random-color-title-wrapper h1 {
+    @apply text-6xl font-extrabold;
+  }
+
+  .random-color-title-wrapper h3 {
+    @apply text-4xl;
   }
 }

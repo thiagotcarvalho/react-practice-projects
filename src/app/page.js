@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="App">
       {/* Accordian component */}
-      {/* <Accordian /> */}
+      <Accordian />
 
       {/* Random Color Component */}
       <RandomColor />
