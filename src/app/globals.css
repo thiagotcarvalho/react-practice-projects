@@ -12,7 +12,7 @@
 
   /* ACCORDIAN */
   .accordian-wrapper {
-    @apply flex justify-center items-center flex-col gap-10 h-screen w-screen;
+    @apply flex justify-center items-center flex-col gap-10 mt-10;
   }
 
   .accordian-wrapper button {
