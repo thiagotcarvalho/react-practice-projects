@@ -1,5 +1,6 @@
-import Accordian from './accordian/page';
-import RandomColor from './random-color/page';
+import Accordian from '../components/accordian/page';
+import RandomColor from '../components/random-color/page';
+import ImageSlider from '../components/image-slider/page';
 
 export default function Home() {
   return (
@@ -7,8 +8,15 @@ export default function Home() {
       {/* Accordian component */}
       <Accordian />
 
-      {/* Random Color Component */}
+      {/* Random Color component */}
       <RandomColor />
+
+      {/* Image Slider component */}
+      <ImageSlider
+        url={'https://picsum.photos/v2/list'}
+        limit={'10'}
+        page={'1'}
+      />
     </div>
   );
 }

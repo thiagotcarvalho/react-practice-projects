@@ -45,7 +45,7 @@
   }
 
   .random-color-button-wrapper button {
-    @apply bg-stone-100 rounded-md shadow-md text-sm font-bold px-5 py-2.5 mt-5;
+    @apply bg-stone-100 rounded-md shadow-md text-sm font-bold px-5 py-2.5 mt-10;
   }
   
   .random-color-button-wrapper button:hover {
@@ -62,5 +62,42 @@
 
   .random-color-title-wrapper h3 {
     @apply text-4xl;
+  }
+
+  /* IMAGE SLIDER */
+  .image-slider-container {
+    @apply flex justify-center relative items-center w-5/6 h-5/6 mt-10;
+  }
+
+  .image-slider-current-image {
+    @apply rounded-md drop-shadow-lg w-full h-full;
+  }
+
+  .hide-image-slider-current-image {
+    @apply hidden;
+  }
+
+  .arrow {
+    @apply absolute w-8 h-8 text-white;
+  }
+  
+  .arrow-left {
+    @apply left-4; 
+  }
+  
+  .arrow-right {
+    @apply right-4;
+  }
+  
+  .image-slider-circle-indicators {
+    @apply flex absolute bottom-4;
+  }
+  
+  .image-slider-current-indicator {
+    @apply bg-white border-0 outline-none rounded-md cursor-pointer w-4 h-4 mx-1;
+  }
+
+  .image-slider-inactive-indicator {
+    @apply bg-gray-500;
   }
 }
