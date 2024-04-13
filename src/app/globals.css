@@ -66,11 +66,11 @@
 
   /* IMAGE SLIDER */
   .image-slider-container {
-    @apply flex justify-center relative items-center w-5/6 h-5/6 mt-10;
+    @apply flex justify-center relative items-center m-10;
   }
 
   .image-slider-current-image {
-    @apply rounded-md drop-shadow-lg w-full h-full;
+    @apply rounded-md shadow-md w-full h-full;
   }
 
   .hide-image-slider-current-image {
@@ -78,7 +78,7 @@
   }
 
   .arrow {
-    @apply absolute w-8 h-8 text-white;
+    @apply flex absolute w-8 h-8 text-white drop-shadow-md cursor-pointer;
   }
   
   .arrow-left {
