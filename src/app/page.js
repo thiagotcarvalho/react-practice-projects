@@ -17,6 +17,9 @@ export default function Home() {
         limit={'10'}
         page={'1'}
       />
+
+      {/* GitHub Profile Finder component */}
+      {/* <GitHubProfileFinder /> */}
     </div>
   );
 }
