@@ -6,7 +6,7 @@
 
   /* GLOBAL */
   html {
-    @apply bg-white text-black;
+    @apply bg-white text-black place-content-center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
@@ -99,5 +99,46 @@
 
   .image-slider-inactive-indicator {
     @apply bg-gray-500;
+  }
+  
+  /* GITHUB PROFILE FINDER */
+  .github-profile-container {
+    @apply my-0 mx-auto w-11/12 max-w-5xl p-5 rounded-lg;
+  }
+
+  .github-input-wrapper {
+    @apply flex justify-center gap-1 mb-5;
+  }
+
+  .github-input-wrapper input {
+    @apply p-3 text-base border-solid border-2 rounded-lg;
+  }
+
+  .github-input-wrapper button {
+    @apply py-1 px-3 border-none rounded-lg bg-cyan-500 text-slate-950 cursor-pointer;
+  }
+
+  .github-profile-user {
+    @apply p-4 rounded-lg border-solid border-2 bg-green-400;
+  }
+
+  .github-avatar-wrapper {
+    @apply flex justify-center;
+  }
+
+  .github-profile-avatar {
+    @apply h-40 aspect-square rounded-full;
+  }
+
+  .github-name-container {
+    @apply flex justify-center gap-5 mt-5;
+  }
+
+  .github-name-container p {
+    @apply m-0 text-xl font-bold;
+  }
+
+  .github-profile-info div {
+    @apply flex justify-center gap-5 text-xl font-bold;
   }
 }

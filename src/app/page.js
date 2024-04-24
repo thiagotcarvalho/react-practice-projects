@@ -1,6 +1,7 @@
 import Accordian from '../components/accordian/page';
 import RandomColor from '../components/random-color/page';
 import ImageSlider from '../components/image-slider/page';
+import GitHubProfileFinder from '../components/github-profile-finder/page';
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       />
 
       {/* GitHub Profile Finder component */}
-      {/* <GitHubProfileFinder /> */}
+      <GitHubProfileFinder />
     </div>
   );
 }
